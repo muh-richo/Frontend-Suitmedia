@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suitmedia</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <header class="navbar-container">
+        <div class="logo">
+            <img src="img/suitmedia_logo.png" alt="Suitmedia" />
+        </div>
+        <nav class="nav-list">
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#ideas">Ideas</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="hero min-h-screen" style="background-image: url(img/banner.jpg);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold text-white">Ideas</h1>
+                    <p class="mb-5 text-white">Where all our great things begin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="controls py-10 px-20 flex justify-between items-center">
+        <div>
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option value="-published_at">Newest</option>
+                <option value="published_at">Oldest</option>
+            </select>
+        </div>
+        <div>
+            <label for="page-size">Show per page:</label>
+            <select id="page-size">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="list-post w-full flex flex-wrap gap-8 justify-center ">
+        <div class="w-full flex flex-wrap gap-8 justify-center">
+            <div class="card w-96 bg-white shadow-xl">
+                <img src="https://placeholder.com/400x300" alt="dummy image" />
+                <div class="card-body ">
+                    <p>5 SEPTERMBER 2022</p>
+                    <h2 class="card-title text-black">Kenali Tingkatan Influencers berdasarkan Jumlah Followers</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pagination flex justify-center py-4 items-center">
+        <button id="prev-page" class="btn" disabled>Previous</button>
+        <span id="page-number" class="px-4">Page 1</span>
+        <button id="next-page" class="btn">Next</button>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

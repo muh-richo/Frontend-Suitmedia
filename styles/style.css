@@ -1,0 +1,91 @@
+
+
+header.navbar-container {
+    width: 100%;
+    padding-block: 0.5rem;
+    margin-inline: auto;
+   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    z-index: 9999;
+    
+    background-color: #E5622B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    position: fixed;
+    top: 0;
+}
+   
+header.navbar-container .logo img {
+    width: 100px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 0.5rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #ffffff;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li a:hover {
+    border-bottom: 1px solid white;
+}
+
+/* .list-post {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+}
+
+.card {
+    flex: 1 1 calc(25% - 16px);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card p {
+    margin: 0;
+    color: gray;
+} */
