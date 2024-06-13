@@ -8,14 +8,14 @@ function addDataToCards(data) {
     // Menghapus konten yang ada di dalam list-post sebelumnya (jika ada)
     listPostSection.innerHTML = '';
 
-    // Loop melalui setiap ide dari data yang diterima
+    // Loop melalui setiap items dari data yang diterima
     data.forEach(idea => {
         const card = document.createElement('div');
         card.classList.add('card', 'w-96', 'bg-white', 'shadow-xl');
 
         const figure = document.createElement('figure');
         const img = document.createElement('img');
-        img.src = "img/post_img.jpg"; // Menggunakan small_image dari data JSON
+        img.src = "img/post_img.jpg"; // Menggunakan small_image dari data JSON error
         img.alt = idea.slug;
         figure.appendChild(img);
 

@@ -4,16 +4,13 @@ const axios = require('axios');
 
 const app = express();
 
-// Pengaturan proxy
 const proxyOptions = {
   target: 'https://suitmedia-backend.suitdev.com',
-  changeOrigin: true, // untuk mengubah host header ke target URL
+  changeOrigin: true,
 };
 
-// Tambahkan middleware proxy
 app.use('/api', createProxyMiddleware(proxyOptions));
 
-// Menambahkan middleware untuk mengatasi CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // Mengizinkan permintaan dari semua domain, sebaiknya diatur sesuai kebutuhan
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -21,7 +18,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Route untuk mengakses API
 app.get('/ideas', async (req, res) => {
   try {
     // Ambil parameter query dari request
@@ -44,10 +40,8 @@ app.get('/ideas', async (req, res) => {
   }
 });
 
-// Port server
 const port = 3000;
 
-// Jalankan server
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
 });
